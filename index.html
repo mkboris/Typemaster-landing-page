@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Frontend Mentor | Typemaster pre-launch landing page</title>
+  </head>
+  <body class="min-h-screen overflow-x-hidden">
+    <header>
+      <nav
+        class="flex w-[327px] md:w-[689px] lg:w-[1110px] mx-auto items-center justify-between mt-[23px] md:mt-[40px] lg:mt-[55px] mb-[64px] md:mb-[62px] lg:mb-[83px]"
+      >
+        <img class="w-[40px] h-[40px]" src="assets/shared/logo.svg" alt="" />
+        <button
+          class="w-[151px] h-[48px] md:w-[175px] md:h-[58px] text-dark-blue font-bold text-base leading-[26px] uppercase bg-light-grayish-blue hover:bg-dark-blue hover:text-[#ffffff] rounded-md"
+        >
+          Pre-order now
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <!-- global container -->
+        <div
+          class="mb-[111px] md:mb-[142px] lg:mb-[168px] md:mx-auto md:ml-[39px] lg:md:ml-auto lg:w-[1110px]"
+        >
+          <!-- items1 container -->
+          <div class="flex md:flex-row">
+            <!-- heading container -->
+            <div
+              class="w-[327px] md:w-[339px] lg:w-[445px] mx-auto flex flex-col pt-[3em] lg:ml-0 md:mr-[70px] lg:mr-[125px]"
+            >
+              <div>
+                <h1
+                  class="font-black text-dark-blue text-[48px] leading-[48px] lg:text-[56px] lg:leading-[56px] uppercase mb-[34px] lg:mb-6"
+                >
+                  Typemaster keyboard
+                </h1>
+                <p
+                  class="font-bold text-grayish-blue text-[16px] leading-[26px] lg:text-[18px] mb-[39px] lg:mb-10 md:w-[339px] lg:w-[445px]"
+                >
+                  Improve your productivity and gaming without breaking the
+                  bank. Upgrade to a high quality mechanical typing experience.
+                </p>
+              </div>
+              <div
+                class="flex items-center space-x-[32px] md:space-x-[37px] lg:space-x-[40px] mb-16 md:mb-0"
+              >
+                <button
+                  class="w-[150px] h-[48px] md:w-[175px] md:h-[58px] text-[#ffffff] font-bold text-base leading-[26px] uppercase bg-thick-orange hover:bg-light-orange rounded-md"
+                >
+                  Pre-order now
+                </button>
+                <p
+                  class="text-grayish-blue font-bold text-base leading-[26px] uppercase"
+                >
+                  Release on 5/27
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <picture class="w-[478px] h-[425px]">
+                <source
+                  class="rounded-3xl"
+                  media="(min-width: 976px)"
+                  srcset="assets/desktop/image-keyboard.jpg"
+                />
+
+                <img
+                  src="assets/tablet/image-keyboard.jpg"
+                  alt="keyboard"
+                  class="hidden md:block rounded-3xl lg:w-[540px] lg:h-[480px]"
+                />
+              </picture>
+            </div>
+
+            <div class="hidden lg:block absolute right-[-160px] z-[-1]">
+              <img src="assets/shared/pattern-square.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="md:hidden">
+            <img
+              class="rounded-3xl w-[372px] mx-auto relative left-6 mb-6"
+              src="assets/mobile/image-keyboard.jpg"
+              alt="keyboard"
+            />
+          </div>
+
+          <div class="flex flex-row">
+            <div class="flex flex-col lg:flex-row items-center">
+              <div
+                class="hidden lg:block absolute left-[-160px] bottom-[-565px] z-[-1]"
+              >
+                <img src="assets/shared/pattern-square.svg" alt="" />
+              </div>
+              <div class="flex space-x-[40px] md:space-x-[30px]">
+                <div
+                  class="mb-14 lg:mb-0 bg-thick-orange bg-blend-multiply mix-blend-multiply rounded-3xl"
+                >
+                  <picture
+                    class="w-[129px] h-[193px] md:w-[214px] md:h-[320px] lg:w-[255px] lg:h-[480px] opacity-20"
+                  >
+                    <source
+                      class="rounded-3xl"
+                      media="(min-width: 976px)"
+                      srcset="assets/desktop/image-phone-and-keyboard.jpg"
+                    />
+                    <source
+                      class="rounded-3xl"
+                      media="(min-width: 768px)"
+                      srcset="assets/tablet/image-phone-and-keyboard.jpg"
+                    />
+                    <img
+                      src="assets/mobile/image-phone-and-keyboard.jpg"
+                      alt="phone and keyboard"
+                      class="rounded-3xl"
+                    />
+                  </picture>
+                </div>
+                <div>
+                  <picture
+                    class="w-[220px] h-[193px] md:w-[445px] md:h-[320px] lg:w-[445px] lg:h-[480px]"
+                  >
+                    <source
+                      class="rounded-3xl"
+                      media="(min-width: 976px)"
+                      srcset="assets/desktop/image-glass-and-keyboard.jpg"
+                    />
+                    <source
+                      class="rounded-3xl"
+                      media="(min-width: 768px)"
+                      srcset="assets/tablet/image-glass-and-keyboard.jpg"
+                    />
+                    <img
+                      src="assets/mobile/image-glass-and-keyboard.jpg"
+                      alt="keyboard and glass"
+                      class="rounded-3xl relative right-6 md:right-0"
+                    />
+                  </picture>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="flex flex-col items-center md:flex-row lg:flex-col text-center md:text-left w-[327px] md:w-[689px] lg:w-[255px] lg:ml-[125px]"
+                >
+                  <h2
+                    class="font-black text-dark-blue text-[32px] leading-[36px] uppercase mb-6 md:mb-0 lg:mb-6"
+                  >
+                    Mechanical wireless keyboard
+                  </h2>
+                  <p
+                    class="font-bold text-grayish-blue text-[16px] leading-[26px]"
+                  >
+                    The Typemaster keyboard boasts top-notch build and practical
+                    design. It offers a wide variety of switches and keycaps,
+                    along with reliable wireless connectivity.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div
+          class="flex flex-col lg:flex-row w-[327px] md:w-[631px] lg:w-[1110px] mx-auto text-center md:text-left mb-[96px] md:mb-[142px] lg:mb-[128px]"
+        >
+          <div class="md:flex flex-row">
+            <div class="md:mr-[69px] lg:mr-[30px]">
+              <!-- class="md:w-[281px] lg:w-[255px]" -->
+              <div
+                class="w-[65px] h-[65px] bg-thick-orange rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-12"
+              >
+                <img src="assets/shared/icon-compatible.svg" alt="" />
+              </div>
+              <h3
+                class="font-black text-dark-blue text-2xl leading-7 uppercase mb-6 md:w-[219px]"
+              >
+                Highly compatible
+              </h3>
+              <p
+                class="font-bold text-grayish-blue text-base leading-[26px] mb-16 md:mb-[72px] lg:mb-0"
+              >
+                Easy to use and works well with all major computer brands,
+                gaming consoles and mobile devices. Plug & play, no installation
+                or driver needed.
+              </p>
+            </div>
+            <div class="lg:mr-[30px]">
+              <div
+                class="w-[65px] h-[65px] bg-thick-orange rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-12"
+              >
+                <img src="assets/shared/icon-bluetooth.svg" alt="" />
+              </div>
+              <h3
+                class="font-black text-dark-blue text-2xl leading-7 uppercase mb-6 md:w-[223px]"
+              >
+                Wireless with bluetooth
+              </h3>
+              <p
+                class="font-bold text-grayish-blue text-base leading-[26px] mb-16 md:mb-[72px] lg:mb-0"
+              >
+                Powerful 2.4G RF technology allows you to connect the cordless
+                keyboard from up to 30ft away. Simply plug the unifying receiver
+                into your computer.
+              </p>
+            </div>
+          </div>
+
+          <div class="md:flex flex-row">
+            <div class="md:mr-[69px] lg:mr-[30px]">
+              <div
+                class="w-[65px] h-[65px] bg-thick-orange rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-12"
+              >
+                <img src="assets/shared/icon-battery.svg" alt="" />
+              </div>
+              <h3
+                class="font-black text-dark-blue text-2xl leading-7 uppercase mb-6 md:w-[223px]"
+              >
+                High capacity battery
+              </h3>
+              <p
+                class="font-bold text-grayish-blue text-base leading-[26px] mb-16 md:mb-[72px] lg:mb-0"
+              >
+                Equipped with a long-lasting built-in battery, you’ll never have
+                to spend a dime on replaceable ones.  Enjoy 40 hours of usage
+                time between charges.
+              </p>
+            </div>
+            <div class="lg:mr-[30px]">
+              <div
+                class="w-[65px] h-[65px] bg-thick-orange rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-12"
+              >
+                <img src="assets/shared/icon-light.svg" alt="" />
+              </div>
+              <h3
+                class="font-black text-dark-blue text-2xl leading-7 uppercase mb-6 md:w-[223px]"
+              >
+                RGB backlit modes
+              </h3>
+              <p
+                class="font-bold text-grayish-blue text-base leading-[26px] mb-16 md:mb-[72px] lg:mb-0"
+              >
+                Choose from 4 backlight brightness levels and adjustable
+                breathing speed. Each key glows intensely in the dark and helps
+                you type in low light conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="flex items-center justify-center">
+        <p
+          class="font-bold text-grayish-blue text-base leading-[26px] mb-[50px] md:mb-[43px] lg:mb-[39px]"
+        >
+          Typemaster 2021 <span class="font-medium">| All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
