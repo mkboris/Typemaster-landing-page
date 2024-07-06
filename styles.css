@@ -1,0 +1,510 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+* {
+  margin: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+header {
+  margin-top: 1.4375rem;
+  padding: 0 1.5rem;
+  margin-bottom: 4rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-btn {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 162%;
+  text-transform: uppercase;
+  color: #162542;
+  background: #e8eff2;
+  border-radius: 0.5rem;
+  padding: 0.6875rem 0.875rem;
+}
+
+.nav-btn:hover {
+  color: #ffffff;
+  background: #162542;
+}
+
+.main-heading {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #162542;
+  margin-bottom: 2rem;
+}
+
+.main-paragraph {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 162%;
+  color: #7b8bad;
+  margin-bottom: 2rem;
+}
+
+.link-date {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-btn {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 162%;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #f16718;
+  border-radius: 0.5rem;
+  padding: 0.6875rem 0.875rem;
+}
+
+.hero-btn:hover {
+  background: #ff9b62;
+  border-radius: 0.5rem;
+}
+
+.hero-date {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 162%;
+  text-transform: uppercase;
+  color: #7b8bad;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-heading {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 112%;
+  text-transform: uppercase;
+  color: #162542;
+  margin-bottom: 1.5rem;
+}
+
+.center-paragraph {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 162%;
+  color: #7b8bad;
+}
+
+.images-grid {
+  margin-bottom: 6.9375rem;
+}
+
+main {
+  margin-bottom: 6rem;
+}
+
+picture img {
+  border-radius: 1.25rem;
+}
+
+.overlay {
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+}
+
+.container {
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  /* grid-template-rows: repeat(4, 1fr); */
+  grid-template-areas: "a a" "b b" "c d" "e e";
+}
+
+.text-container {
+  grid-area: a;
+}
+
+.keyboard {
+  max-width: 540px;
+  grid-area: b;
+}
+
+.phone-keyboard {
+  background: #f16718;
+  border-radius: 1.25rem;
+  max-width: 255px;
+  grid-area: c;
+}
+
+.glass-keyboard {
+  grid-area: d;
+  max-width: 445px;
+}
+
+.center-text {
+  grid-area: e;
+}
+
+.wrapper {
+  display: grid;
+  row-gap: 4rem;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f16718;
+  border-radius: 1rem;
+  width: 4.0625rem;
+  height: 4.0625rem;
+  margin-bottom: 3rem;
+}
+
+.box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box h3 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 117%;
+  text-transform: uppercase;
+  color: #162542;
+  margin-bottom: 1.5rem;
+}
+
+.box p {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 162%;
+  color: #7b8bad;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  margin-bottom: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 162%;
+  color: #7b8bad;
+}
+
+span {
+  font-weight: 500;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 37.5rem) {
+  header {
+    margin-top: 2.5rem;
+    padding: 0 2.5rem;
+    margin-bottom: 3.875rem;
+  }
+
+  .nav-btn,
+  .hero-btn {
+    padding: 1rem 1.625rem;
+  }
+
+  .text-container {
+    max-width: 21.1875rem;
+  }
+
+  .main-heading {
+    margin-bottom: 2.125rem;
+  }
+
+  .main-paragraph {
+    margin-bottom: 2.4375rem;
+  }
+
+  .container {
+    padding: 0 0 0 2.5rem;
+    column-gap: 30px;
+    row-gap: 40px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "a b b" "c d d" "e e e";
+  }
+
+  .text-container {
+    grid-area: a;
+  }
+
+  .keyboard {
+    grid-area: b;
+  }
+
+  .phone-keyboard {
+    grid-area: c;
+  }
+
+  .glass-keyboard {
+    grid-area: d;
+  }
+
+  .center-text {
+    grid-area: e;
+  }
+
+  .link-date {
+    gap: 2.3125rem;
+  }
+
+  .center-text-container {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+  }
+
+  .center-text {
+    max-width: 43.0625rem;
+    text-align: left;
+  }
+
+  .center-heading {
+    margin-bottom: 0;
+  }
+
+  .images-grid,
+  main {
+    margin-bottom: 8.875rem;
+  }
+
+  .wrapper {
+    row-gap: 4.5rem;
+    column-gap: 4.3125rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0 6.125rem 0 2.5rem;
+  }
+
+  .box {
+    text-align: left;
+    align-items: flex-start;
+    max-width: 17.5625rem;
+  }
+
+  .icon-wrapper {
+    margin-bottom: 2.5rem;
+  }
+
+  footer {
+    margin-bottom: 2.6875rem;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 61rem) {
+  header {
+    margin-top: 3.4375rem;
+    padding: 0 10.3125rem;
+    margin-bottom: 5.1875rem;
+  }
+
+  .text-container {
+    max-width: 27.8125rem;
+  }
+
+  .main-heading {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .main-paragraph {
+    font-size: 1.125rem;
+    line-height: 144%;
+    margin-bottom: 2.5rem;
+  }
+
+  .container {
+    padding: 0 0 0 10.3125rem;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "a b b" "c d e";
+    align-items: center;
+  }
+
+  .text-container {
+    grid-area: a;
+  }
+
+  .keyboard {
+    grid-area: b;
+    justify-self: center;
+  }
+
+  .phone-keyboard {
+    grid-area: c;
+  }
+
+  .glass-keyboard {
+    grid-area: d;
+  }
+
+  .center-text {
+    grid-area: e;
+  }
+
+  .link-date {
+    gap: 2.5rem;
+  }
+
+  .center-heading {
+    margin-bottom: 1.6875rem;
+  }
+
+  .center-text {
+    max-width: 14.0625rem;
+  }
+
+  .center-text-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .images-grid {
+    margin-bottom: 10.5rem;
+  }
+
+  main {
+    margin-bottom: 8rem;
+  }
+
+  .box {
+    max-width: 14.0625rem;
+  }
+
+  .wrapper {
+    column-gap: 1.875rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    padding: 0 10.3125rem;
+  }
+
+  .icon-wrapper {
+    margin-bottom: 3rem;
+  }
+
+  footer {
+    margin-bottom: 2.4375rem;
+  }
+}
