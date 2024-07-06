@@ -108,6 +108,12 @@ header {
   margin-top: 1.4375rem;
   padding: 0 1.5rem;
   margin-bottom: 4rem;
+  max-width: 1110px;
+  margin-inline: auto;
+}
+
+main {
+  margin-bottom: 6rem;
 }
 
 nav {
@@ -125,6 +131,7 @@ nav {
   background: #e8eff2;
   border-radius: 0.5rem;
   padding: 0.6875rem 0.875rem;
+  transition: all 0.3s ease-in;
 }
 
 .nav-btn:hover {
@@ -134,11 +141,12 @@ nav {
 
 .main-heading {
   font-weight: 900;
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 2rem + 2vw, 3.5rem);
   line-height: 100%;
   text-transform: uppercase;
   color: #162542;
   margin-bottom: 2rem;
+  transition: all 0.3s ease-in;
 }
 
 .main-paragraph {
@@ -164,6 +172,8 @@ nav {
   background: #f16718;
   border-radius: 0.5rem;
   padding: 0.6875rem 0.875rem;
+  text-wrap: nowrap;
+  transition: all 0.3s ease-in;
 }
 
 .hero-btn:hover {
@@ -177,10 +187,6 @@ nav {
   line-height: 162%;
   text-transform: uppercase;
   color: #7b8bad;
-}
-
-.center-text {
-  text-align: center;
 }
 
 .center-heading {
@@ -199,55 +205,61 @@ nav {
   color: #7b8bad;
 }
 
-.images-grid {
-  margin-bottom: 6.9375rem;
-}
-
-main {
-  margin-bottom: 6rem;
-}
-
 picture img {
   border-radius: 1.25rem;
 }
 
-.overlay {
-  mix-blend-mode: multiply;
-  opacity: 0.75;
-}
-
 .container {
   padding: 0 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 24px;
-  /* grid-template-rows: repeat(4, 1fr); */
-  grid-template-areas: "a a" "b b" "c d" "e e";
+  max-width: 1110px;
+  margin-inline: auto;
+  margin-bottom: 6.9375rem;
 }
 
-.text-container {
-  grid-area: a;
+.text-keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .keyboard {
-  max-width: 540px;
-  grid-area: b;
+  transition: all 0.5s ease-in-out;
+}
+
+.sec-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
 }
 
 .phone-keyboard {
-  background: #f16718;
+  background-color: #f16718;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 1.25rem;
   max-width: 255px;
-  grid-area: c;
+  grid-column: 1/2;
+  transition: all 0.3s ease-in;
+  background-image: url("assets/mobile/image-phone-and-keyboard.jpg");
 }
 
 .glass-keyboard {
-  grid-area: d;
-  max-width: 445px;
+  grid-column: 2/3;
+  /* max-width: 445px; */
+  transition: all 0.3s ease-in;
 }
 
-.center-text {
-  grid-area: e;
+.center-text-container {
+  text-align: center;
+  grid-column: 1/3;
+}
+
+.wrapper-container {
+  max-width: 1110px;
+  margin-inline: auto;
+  padding: 0 1.5rem;
 }
 
 .wrapper {
@@ -295,9 +307,7 @@ a {
 
 footer {
   margin-bottom: 3.125rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 footer p {
@@ -311,21 +321,26 @@ span {
   font-weight: 500;
 }
 
-/* Tablet styles */
-@media screen and (min-width: 37.5rem) {
+.pattern-right,
+.pattern-left {
+  display: none;
+}
+
+/* Tablet styles 37.5rem*/
+@media screen and (min-width: 800px) {
   header {
     margin-top: 2.5rem;
     padding: 0 2.5rem;
     margin-bottom: 3.875rem;
   }
 
+  main {
+    margin-bottom: 8.875rem;
+  }
+
   .nav-btn,
   .hero-btn {
     padding: 1rem 1.625rem;
-  }
-
-  .text-container {
-    max-width: 21.1875rem;
   }
 
   .main-heading {
@@ -337,31 +352,25 @@ span {
   }
 
   .container {
-    padding: 0 0 0 2.5rem;
+    padding: 0 2.5rem;
+    margin-bottom: 8.875rem;
+  }
+
+  .text-keyboard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     column-gap: 30px;
-    row-gap: 40px;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: "a b b" "c d d" "e e e";
+    margin-bottom: 30px;
   }
 
   .text-container {
-    grid-area: a;
+    width: 50%;
   }
 
   .keyboard {
-    grid-area: b;
-  }
-
-  .phone-keyboard {
-    grid-area: c;
-  }
-
-  .glass-keyboard {
-    grid-area: d;
-  }
-
-  .center-text {
-    grid-area: e;
+    max-width: 540px;
+    width: 50%;
   }
 
   .link-date {
@@ -371,11 +380,8 @@ span {
   .center-text-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 2.25rem;
-  }
-
-  .center-text {
-    max-width: 43.0625rem;
     text-align: left;
   }
 
@@ -383,23 +389,19 @@ span {
     margin-bottom: 0;
   }
 
-  .images-grid,
-  main {
-    margin-bottom: 8.875rem;
+  .wrapper-container {
+    padding: 0 2.5rem;
   }
 
   .wrapper {
-    row-gap: 4.5rem;
     column-gap: 4.3125rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 0 6.125rem 0 2.5rem;
   }
 
   .box {
     text-align: left;
     align-items: flex-start;
-    max-width: 17.5625rem;
   }
 
   .icon-wrapper {
@@ -413,18 +415,20 @@ span {
 
 /* Desktop styles */
 @media screen and (min-width: 61rem) {
+  body {
+    overflow-x: hidden;
+  }
+
   header {
     margin-top: 3.4375rem;
-    padding: 0 10.3125rem;
     margin-bottom: 5.1875rem;
   }
 
-  .text-container {
-    max-width: 27.8125rem;
+  main {
+    margin-bottom: 8rem;
   }
 
   .main-heading {
-    font-size: 3.5rem;
     margin-bottom: 1.5rem;
   }
 
@@ -435,32 +439,44 @@ span {
   }
 
   .container {
-    padding: 0 0 0 10.3125rem;
-    gap: 30px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "a b b" "c d e";
     align-items: center;
+    margin-bottom: 10.5rem;
+  }
+
+  .text-keyboard {
+    justify-content: space-between;
+    position: relative;
   }
 
   .text-container {
-    grid-area: a;
+    max-width: 27.8125rem;
   }
 
-  .keyboard {
-    grid-area: b;
-    justify-self: center;
+  .sec-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 30px;
+    position: relative;
   }
 
   .phone-keyboard {
-    grid-area: c;
+    background-image: url("assets/desktop/image-phone-and-keyboard.jpg");
+    grid-column: 1/2;
   }
 
   .glass-keyboard {
-    grid-area: d;
+    grid-column: 2/3;
+    max-width: 445px;
   }
 
-  .center-text {
-    grid-area: e;
+  .center-text-container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    justify-self: center;
+    gap: 0;
+    max-width: 14.0625rem;
+    grid-column: 3/4;
   }
 
   .link-date {
@@ -471,24 +487,6 @@ span {
     margin-bottom: 1.6875rem;
   }
 
-  .center-text {
-    max-width: 14.0625rem;
-  }
-
-  .center-text-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-  }
-
-  .images-grid {
-    margin-bottom: 10.5rem;
-  }
-
-  main {
-    margin-bottom: 8rem;
-  }
-
   .box {
     max-width: 14.0625rem;
   }
@@ -497,7 +495,6 @@ span {
     column-gap: 1.875rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    padding: 0 10.3125rem;
   }
 
   .icon-wrapper {
@@ -506,5 +503,19 @@ span {
 
   footer {
     margin-bottom: 2.4375rem;
+  }
+
+  .pattern-right {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -290px;
+  }
+
+  .pattern-left {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -285px;
   }
 }

@@ -34,8 +34,8 @@
     </header>
 
     <main>
-      <section class="images-grid">
-        <div class="container">
+      <section class="container">
+        <div class="text-keyboard">
           <div class="text-container">
             <h1 class="main-heading">Typemaster keyboard</h1>
             <p class="main-paragraph">
@@ -48,68 +48,61 @@
             </div>
           </div>
 
-          <div class="keyboard">
-            <picture>
-              <source
-                media="(min-width:976px)"
-                srcset="assets/desktop/image-keyboard.jpg"
-              />
-              <source
-                media="(min-width:600px)"
-                srcset="assets/tablet/image-keyboard.jpg"
-              />
-              <img src="assets/mobile/image-keyboard.jpg" alt="keyboard" />
-            </picture>
+          <picture class="keyboard">
+            <source
+              media="(min-width:976px)"
+              srcset="assets/desktop/image-keyboard.jpg"
+            />
+            <source
+              media="(min-width:800px)"
+              srcset="assets/tablet/image-keyboard.jpg"
+            />
+            <img src="assets/mobile/image-keyboard.jpg" alt="keyboard" />
+          </picture>
+
+          <img
+            src="assets/shared/pattern-square.svg"
+            alt=""
+            class="pattern-right"
+          />
+        </div>
+
+        <div class="sec-container">
+          <div class="phone-keyboard"></div>
+
+          <picture class="glass-keyboard">
+            <source
+              media="(min-width:976px)"
+              srcset="assets/desktop/image-glass-and-keyboard.jpg"
+            />
+            <source
+              media="(min-width:800px)"
+              srcset="assets/tablet/image-glass-and-keyboard.jpg"
+            />
+            <img
+              src="assets/mobile/image-glass-and-keyboard.jpg"
+              alt="Glass and keyboard"
+            />
+          </picture>
+
+          <div class="center-text-container">
+            <h2 class="center-heading">Mechanical wireless keyboard</h2>
+            <p class="center-paragraph">
+              The Typemaster keyboard boasts top-notch build and practical
+              design. It offers a wide variety of switches and keycaps, along
+              with reliable wireless connectivity.
+            </p>
           </div>
 
-          <div class="phone-keyboard">
-            <picture class="overlay">
-              <source
-                media="(min-width:976px)"
-                srcset="assets/desktop/image-phone-and-keyboard.jpg"
-              />
-              <source
-                media="(min-width:600px)"
-                srcset="assets/tablet/image-phone-and-keyboard.jpg"
-              />
-              <img
-                src="assets/mobile/image-phone-and-keyboard.jpg"
-                alt="Phone and keyboard"
-              />
-            </picture>
-          </div>
-
-          <div class="glass-keyboard">
-            <picture>
-              <source
-                media="(min-width:976px)"
-                srcset="assets/desktop/image-glass-and-keyboard.jpg"
-              />
-              <source
-                media="(min-width:600px)"
-                srcset="assets/tablet/image-glass-and-keyboard.jpg"
-              />
-              <img
-                src="assets/mobile/image-glass-and-keyboard.jpg"
-                alt="Glass and keyboard"
-              />
-            </picture>
-          </div>
-
-          <div class="center-text">
-            <div class="center-text-container">
-              <h2 class="center-heading">Mechanical wireless keyboard</h2>
-              <p class="center-paragraph">
-                The Typemaster keyboard boasts top-notch build and practical
-                design. It offers a wide variety of switches and keycaps, along
-                with reliable wireless connectivity.
-              </p>
-            </div>
-          </div>
+          <img
+            src="assets/shared/pattern-square.svg"
+            alt=""
+            class="pattern-left"
+          />
         </div>
       </section>
 
-      <section>
+      <section class="wrapper-container">
         <div class="wrapper">
           <div class="box">
             <div class="icon-wrapper">
